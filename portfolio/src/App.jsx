@@ -8,6 +8,9 @@ import {
   useLocation,
 } from "react-router-dom";
 import About from "./About";
+import Contact from "./Contact";
+import Projects from "./Projects";
+import Experience from "./Experience";
 
 const SECTIONS = ["about", "projects", "experience", "contact"];
 
@@ -41,16 +44,16 @@ function Home() {
         <About />
       </Section>
 
-      <Section id="projects" title="Projects">
-        Showcase a few projects with links/screenshots.
+      <Section id="experience" title="Experience">
+        <Experience />
       </Section>
 
-      <Section id="experience" title="Experience">
-        Roles, companies, impact, and stack.
+      <Section id="projects" title="Projects">
+        <Projects />
       </Section>
 
       <Section id="contact" title="Contact">
-        Email, socials, or a contact form.
+        <Contact />
       </Section>
     </div>
   );
