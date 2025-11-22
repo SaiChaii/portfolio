@@ -13,6 +13,14 @@ import Projects from "./Projects";
 import Experience from "./Experience";
 
 const SECTIONS = ["about", "projects", "experience", "contact"];
+const exp = [
+  {
+    img: "public/mewurk_logo.jpeg",
+    company: "Mewurk Technologies",
+    title: "Graduate Software Engineer",
+    timeline: "June 2024 - Present",
+  },
+];
 
 /** Scroll to section matching the current pathname (e.g., /about -> #about) */
 function ScrollToSection() {
@@ -27,6 +35,9 @@ function ScrollToSection() {
 }
 
 function Home() {
+  useEffect(() => {
+    document.documentElement.classList.add("dark");
+  }, []);
   return (
     <div className="scroll-smooth flex flex-col items-center justify-center">
       {/* Header: centered horizontal bar */}
@@ -45,7 +56,16 @@ function Home() {
       </Section>
 
       <Section id="experience" title="Experience">
-        <Experience />
+        {exp.map((item, index) => (
+          <Experience
+            key={index}
+            img={item.img}
+            company={item.company}
+            title={item.title}
+            timeline={item.timeline}
+          />
+        ))}
+        {/* <Experience /> */}
       </Section>
 
       <Section id="projects" title="Projects">
@@ -80,7 +100,7 @@ function Section({ id, title, children, first = false }) {
     <section
       id={id}
       className={[
-        "mx-auto w-full max-w-[50%] px-4 py-15",
+        "mx-auto w-full max-w-[50%] px-4 py-8",
         "scroll-mt-28", // keeps heading visible below sticky nav
         first ? "" : "border-t border-gray-200",
       ].join(" ")}

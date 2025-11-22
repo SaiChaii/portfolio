@@ -26,7 +26,7 @@ const About = () => {
         technologies, and I actively contribute to both commercial projects and
         personal learning.
       </div>
-      <div className="flex rounded-sm border border-black p-4 h-[20vh]">
+      <div className="flex rounded-sm border border-black p-4 h-[14vh]">
         <div className="w-[50%] flex flex-col gap-2 ">
           <div className="font-bold text-[1.3rem]">Education</div>
           <div>
