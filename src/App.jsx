@@ -11,8 +11,7 @@ import About from "./About";
 import Contact from "./Contact";
 import Projects from "./Projects";
 import Experience from "./Experience";
-import DarkModeToggle from "./DarkToggle";
-import OffCanvas from "./offCanvas";
+import OffCanvas from "./OffCanvas";
 
 const SECTIONS = ["about", "projects", "experience", "contact"];
 const exp = [
