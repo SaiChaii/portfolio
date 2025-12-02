@@ -213,7 +213,12 @@ function Section({ id, title, children, first = false }) {
         first ? "" : "border-t border-gray-200 dark:border-neutral-700",
       ].join(" ")}
     >
-      <h2 className="mb-2 text-2xl  dark:text-gray-300 font-bold">{title}</h2>
+      <div className="flex items-center gap-2">
+        <h2 className="mb-2 text-2xl  dark:text-gray-300 font-bold">{title}</h2>
+        {title == "Experience" && (
+          <div className="mb-2 text dark:text-gray-300">Click to view more</div>
+        )}
+      </div>
       <div className="text-gray-700 dark:text-gray-300 leading-relaxed">
         {children}
       </div>

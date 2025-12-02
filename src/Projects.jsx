@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import Card from "./Card";
+import RepoCarousel from "./RepoCarousel";
 
 const Projects = () => {
   const [data, setData] = useState();
@@ -14,14 +14,8 @@ const Projects = () => {
   }, []);
   console.log(data, "data");
   return (
-    <div className="h-[20em]">
-      {data ? (
-        Object.entries(data).forEach(([key, value]) => {
-          <Card id={key} value={value} />;
-        })
-      ) : (
-        <></>
-      )}
+    <div className="">
+      <RepoCarousel repos={data} />
     </div>
   );
 };
