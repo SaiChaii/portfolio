@@ -216,7 +216,9 @@ function Section({ id, title, children, first = false }) {
       <div className="flex items-center gap-2">
         <h2 className="mb-2 text-2xl  dark:text-gray-300 font-bold">{title}</h2>
         {title == "Experience" && (
-          <div className="mb-2 text dark:text-gray-300">Click to view more</div>
+          <div className="mb-1 text-sm dark:text-gray-300">
+            (Click one position to view more)
+          </div>
         )}
       </div>
       <div className="text-gray-700 dark:text-gray-300 leading-relaxed">
