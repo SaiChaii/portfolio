@@ -26,24 +26,11 @@ const About = () => {
         technologies, and I actively contribute to both commercial projects and
         personal learning.
       </div>
-      <div className="flex rounded-sm border border-black p-4 h-[8em]">
-        <div className="w-[50%] flex flex-col gap-2 ">
-          <div className="font-bold text-[1.3rem]">Education</div>
-          <div>
-            <div className="flex items-center gap-2">
-              <i class="ph ph-arrow-fat-line-right" />
-              Graduated from NIT Raipur-2024
-            </div>
-            <div className="flex items-center gap-2">
-              <i class="ph ph-arrow-fat-line-right" />
-              Information Technology (CGPA: 7.97)
-            </div>
-          </div>
-        </div>
-        <div className="w-[50%] flex flex-col gap-2 ">
+      <div className="flex rounded-sm border border-white p-4">
+        <div className="flex gap-6">
           <div className="font-bold text-[1.3rem]">Links</div>
-          <div>
-            <div className="flex items-center gap-2">
+          <div className="flex gap-2">
+            <div className="flex items-center gap-1">
               <i class="ph ph-link" />
               <a
                 href="https://leetcode.com/u/Chaitanya966/"
@@ -54,8 +41,7 @@ const About = () => {
                 LeetCode
               </a>
             </div>
-
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-1">
               <i class="ph ph-link" />
               <a
                 href="https://github.com/SaiChaii"
