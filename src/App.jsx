@@ -223,7 +223,7 @@ function Section({ id, title, children, first = false }) {
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <>
       <ScrollToSection />
       <Routes>
         <Route path="/" element={<Navigate to="/about" replace />} />
@@ -234,6 +234,6 @@ export default function App() {
         <Route path="/contact" element={<Home />} />
         <Route path="*" element={<Navigate to="/about" replace />} />
       </Routes>
-    </BrowserRouter>
+    </>
   );
 }
