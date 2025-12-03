@@ -328,7 +328,7 @@ function Section({ id, title, children, first = false }) {
       className={[
         "mx-auto w-full max-w-full md:max-w-[50%] px-4 sm:px-6 lg:px-10 py-8",
         "scroll-mt-28",
-        "bg-white dark:bg-neutral-900",
+        "bg-neutral-900",
         first ? "" : "border-t border-gray-200 dark:border-neutral-700",
       ].join(" ")}
     >
