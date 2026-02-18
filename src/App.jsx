@@ -12,6 +12,7 @@ import Contact from "./Contact";
 import Projects from "./Projects";
 import Experience from "./Experience";
 import OffCanvas from "./OffCanvas";
+import Snowfall from "react-snowfall";
 
 const exp = [
   {
@@ -353,6 +354,9 @@ export default function App() {
   return (
     <>
       <ScrollToSection />
+      <Snowfall
+        style={{ position: "fixed", width: "100vw", height: "100vh" }}
+      />
       <Routes>
         <Route path="/" element={<Navigate to="/about" replace />} />
         {/* All routes render Home; Home decides mobile vs desktop behavior */}
