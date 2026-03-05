@@ -4,7 +4,6 @@ export default function OffCanvas({
   open = true,
   onClose,
   data,
-  width = "w-[28rem]",
   side = "right",
 }) {
   useEffect(() => {
