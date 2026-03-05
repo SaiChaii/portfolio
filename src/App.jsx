@@ -164,10 +164,12 @@ function Home() {
 
   return (
     <div className="scroll-smooth flex flex-col items-center bg-neutral-900 min-h-screen">
-      <header className="sticky top-0 z-20 w-full bg-white/80 dark:bg-neutral-900/80 backdrop-blur border-b border-white/10">
-        <div className="px-4 py-3 md:px-8">
-          <div className="flex items-center justify-between md:hidden">
+      <header className="sticky top-4 z-50 w-full flex justify-center px-4">
+        <header className="sticky top-0 z-50 w-full flex justify-center px-4 pt-4">
+          {/* MOBILE NAVBAR */}
+          <div className="flex items-center justify-between w-full md:hidden bg-neutral-900/90 backdrop-blur border-b border-neutral-700 px-4 py-3 rounded-xl">
             <div className="text-lg font-semibold text-white">SaiChaii.dev</div>
+
             <button
               className="text-xl text-gray-200"
               onClick={() => setMenuOpen(true)}
@@ -176,11 +178,15 @@ function Home() {
             </button>
           </div>
 
-          <div className="hidden md:flex justify-center">
+          {/* DESKTOP NAVBAR */}
+          <div className="hidden md:flex justify-center w-full">
             <div
-              className="flex items-center gap-4 w-full max-w-4xl 
-                   rounded-full border border-gray-200/60 dark:border-neutral-700 
-                   bg-neutral-900/90 px-4 py-2 shadow"
+              className="
+      flex items-center gap-4 w-full max-w-4xl
+      rounded-full border border-white/10
+      bg-neutral-900/70 backdrop-blur-xl
+      px-6 py-3 shadow-lg shadow-black/20
+      "
             >
               <div className="text-base font-semibold text-white whitespace-nowrap">
                 SaiChaii.dev
@@ -194,10 +200,10 @@ function Home() {
               </nav>
             </div>
           </div>
-        </div>
+        </header>
       </header>
       <div
-        className={`fixed top-0 right-0 h-full w-64 z-30 bg-neutral-900 text-white
+        className={`fixed top-0 right-0 h-full w-64 z-[60] bg-neutral-900 text-white
         shadow-xl transform transition-transform duration-300 
         ${menuOpen ? "translate-x-0" : "translate-x-full"}`}
       >
@@ -225,7 +231,7 @@ function Home() {
       </div>
       {menuOpen && (
         <div
-          className="fixed inset-0 bg-black/40 backdrop-blur-sm z-10 md:hidden"
+          className="fixed inset-0 bg-black/40 backdrop-blur-sm z-50 md:hidden"
           onClick={() => setMenuOpen(false)}
         ></div>
       )}
@@ -334,7 +340,7 @@ function Section({ id, title, children, first = false }) {
       ].join(" ")}
     >
       <div className="flex flex-col sm:flex-row sm:items-center sm:gap-2">
-        <h2 className="mb-2 text-2xl dark:text-gray-300 font-bold">{title}</h2>
+        <h2 className="mb-2 text-2xl text-white font-bold">{title}</h2>
 
         {title === "Experience" && (
           <div className="text-sm dark:text-gray-300 sm:mt-0 sm:mb-1">
@@ -343,9 +349,7 @@ function Section({ id, title, children, first = false }) {
         )}
       </div>
 
-      <div className="text-gray-700 dark:text-gray-300 leading-relaxed">
-        {children}
-      </div>
+      <div className="text-gray-200 leading-relaxed">{children}</div>
     </section>
   );
 }
